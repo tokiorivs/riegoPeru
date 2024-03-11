@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,22 +14,33 @@
     />
   </head>
   <body>
-    <header class="header">
-      <nav class="nav container" id="nav">
-        <figure class="nav__logo">
-            <img src="" alt="" class="nav__img">
-        </figure>
-        <ul class="nav__links">
-          <li class="nav__list"><a href="" class="nav__link"></a>Inicio</li>
-          <li class="nav__list"><a href="" class="nav__link"></a>Demo</li>
-          <li class="nav__list"><a href="" class="nav__link"></a>Acerca de </li>
-          <li class="nav__list"><a href="" class="nav__link"></a>Preguntas Frecuentes</li>
-          <li class="nav__list"> <a href="" class="nav__link">Contacto</a></li>
-        </ul>
-        <a href="" class="nav__button__contact"></a>
-        <a href="" class="nav__close"></a>
-        <a href="" class="nav__hamburguer"></a>
-      </nav>
-    </header>
+    <div class="container">
+      <header class="header">
+        <nav class="nav" id="nav">
+          <a href="/" class="nav__logo poppins-bold"
+            ><span class="color__primary">Riego</span
+            ><span class="color__secondary">Peru</span></a
+          >
+          <ul class="nav__links">
+            <li class="nav__list"><a href="" class="nav__link">Inicio</a></li>
+            <li class="nav__list"><a href="" class="nav__link">Demo</a></li>
+            <li class="nav__list">
+              <a href="" class="nav__link">Acerca de</a>
+            </li>
+            <li class="nav__list">
+              <a href="" class="nav__link">Preguntas Frecuentes</a>
+            </li>
+            <li class="nav__list"><a href="" class="nav__link">Contacto</a></li>
+          </ul>
+          <a href="" class="nav__button__contact inactive"></a>
+          <a href="" class="nav__close inactive"
+            ><img src="./img/icons8-close.svg" alt=""
+          /></a>
+          <a href="" class="nav__hamburguer"
+            ><img src="./img/icons8-menu.svg" alt=""
+          /></a>
+        </nav>
+      </header>
+    </div>
   </body>
 </html>
