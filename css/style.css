@@ -5,9 +5,11 @@
     --coffe-secondary: #bf9075;
     --baby-blue-secondary: #88e8f2;
     --font-variant: 'Roboto', sans-serif;
+    --grey: #D9D9D9;
 }
 body {
     font-family:"Poppins", sans-serif ;
+    font-size: 16px;
 }
 .container {
   width: 90%;
@@ -16,6 +18,7 @@ body {
   min-width:360px ;
   padding: 10px 10px;
 }
+
 .poppins-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -44,6 +47,28 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
   font-style: normal;
+}
+.subtitle {
+  font-size: 1.6rem ;
+}
+.title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: bold;
+}
+.subtitle {
+  text-align: center;  
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: bold;
+  
+}
+.text {
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
 }
 
 .nav {
@@ -81,9 +106,6 @@ body {
 .color__secondary {
   color: var(--red-primary);
 }
-.inactive {
-  display: none;
-}
 .hero {
   min-height: 500px;
   display: flex;
@@ -92,9 +114,7 @@ body {
   padding: 0px 0px 20px;
 }
 .hero__title{
-  text-align: center;
-  font-size: 20px ;
-  min-width: 280px;
+  min-width: 340px;
   padding: 0px 5px;
 }
 .hero__list{
@@ -115,4 +135,60 @@ body {
   text-align: center;
   color: white;
   text-decoration: none;
+}
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr;
+  grid-template-areas: "info"
+             "media";
+}
+.feature__info{
+  min-width: 340px;
+  max-width: 500px;
+  grid-area: info;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.feature__media {
+  grid-area: media;
+  display: none;
+}
+.feature__items {
+  
+}
+.feature__button {
+  border: none;
+  border-radius: 15px;
+  min-width: 340px;
+  height: 55px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 5px 0px;
+  background-color: var(--grey);
+  cursor: pointer;
+}
+.feature__active {
+  color: var(--red-primary);
+}
+.feature__text {
+  text-align: justify;
+  display: none;
+}
+.feature__media {
+  padding: 0px ;
+  margin: 2px 0px;
+  min-width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature__img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.active {
+  display: block;
 }
