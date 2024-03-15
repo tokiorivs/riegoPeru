@@ -32,9 +32,11 @@
             </li>
             <li class="nav__list"><a href="" class="nav__link">Contacto</a></li>
           </ul>
-          <a href="" class="nav__button__contact inactive"></a>
-          <a href="" class="nav__close inactive"
-            ><img src="./img/icons8-close.svg" alt=""
+          <div class="nav__button__contact">
+            <a class="whatsapp__button" href="">WhatsApp</a>
+          </div>
+          <a href="" class="nav__close"
+            ><img src="./img/icons8-close-white.svg" alt=""
           /></a>
           <a href="" class="nav__hamburguer"
             ><img class="nav__img" src="./img/hamburger.svg" alt=""
@@ -70,19 +72,30 @@
             ><span class="color__secondary">Peru</span>
           </h2>
           <div class="feature__items accordeon">
-            <button class="feature__button poppins-bold feature__active">
-              tomas de agua y canales de riego
-            </button>
-            <div class="feature__media">
+            <div class="feature__button__container">
+              <button
+                id="button_1"
+                class="feature__button poppins-bold feature__active"
+              >
+                tomas de agua y canales de riego</button>
+              <div class="button__open">
+                <img src="./img/flecha__close.png" alt="">
+              </div>
+              <div class="button__close">
+                <img src="./img/flecha_open.svg" alt="">
+              </div>
+            </div>
+
+            <div class="feature__media active">
               <div class="accordeon_content">
-                <figure class="feature__media">
+                <figure class="feature__figure">
                   <img
                     src="./img/ventajas img_mobile.jpg"
                     alt="imagen o video"
-                    class="feature__img active"
+                    class="feature__img"
                   />
                 </figure>
-                <p class="feature__text active">
+                <p class="feature__text">
                   Lleva un registro completo de las tomas de agua y sus
                   respectivos caudales para garantizar un uso equitativo y
                   sostenible.Facilita el mantenimiento y la distribución
@@ -96,7 +109,7 @@
             </button>
             <div class="feature__media">
               <div class="accordeon_content">
-                <figure class="feature__media">
+                <figure class="feature__figure">
                   <img
                     src="./img/ventajas img_mobile.jpg"
                     alt="imagen o video"
@@ -104,11 +117,8 @@
                   />
                 </figure>
                 <p class="feature__text">
-                  Lleva un registro completo de las tomas de agua y sus
-                  respectivos caudales para garantizar un uso equitativo y
-                  sostenible.Facilita el mantenimiento y la distribución
-                  adecuada de agua en los canales de riego para maximizar la
-                  eficiencia del sistema.
+                  Mantén actualizada la información de los regantes, sus
+                  parcelas y cultivos para una gestión más precisa.
                 </p>
               </div>
             </div>
@@ -117,7 +127,7 @@
             </button>
             <div class="feature__media">
               <div class="accordeon_content">
-                <figure class="feature__media">
+                <figure class="feature__figure">
                   <img
                     src="./img/ventajas img_mobile.jpg"
                     alt="imagen o video"
@@ -125,11 +135,8 @@
                   />
                 </figure>
                 <p class="feature__text">
-                  Lleva un registro completo de las tomas de agua y sus
-                  respectivos caudales para garantizar un uso equitativo y
-                  sostenible. Facilita el mantenimiento y la distribución
-                  adecuada de agua en los canales de riego para maximizar la
-                  eficiencia del sistema.
+                  Gestiona eficientemente la información de las juntas de
+                  usuarios, incluyendo sus miembros y autoridades.
                 </p>
               </div>
             </div>
@@ -138,7 +145,7 @@
             </button>
             <div class="feature__media">
               <div class="accordeon_content">
-                <figure class="feature__media">
+                <figure class="feature__figure">
                   <img
                     src="./img/ventajas img_mobile.jpg"
                     alt="imagen o video"
@@ -146,11 +153,8 @@
                   />
                 </figure>
                 <p class="feature__text">
-                  Lleva un registro completo de las tomas de agua y sus
-                  respectivos caudales para garantizar un uso equitativo y
-                  sostenible. Facilita el mantenimiento y la distribución
-                  adecuada de agua en los canales de riego para maximizar la
-                  eficiencia del sistema.
+                  Simplifica y agiliza los procesos burocráticos relacionados
+                  con los permisos, licencias y otros trámites.
                 </p>
               </div>
             </div>
@@ -159,7 +163,7 @@
             </button>
             <div class="feature__media">
               <div class="accordeon_content">
-                <figure class="feature__media">
+                <figure class="feature__figure">
                   <img
                     src="./img/ventajas img_mobile.jpg"
                     alt="imagen o video"
@@ -167,11 +171,8 @@
                   />
                 </figure>
                 <p class="feature__text">
-                  Lleva un registro completo de las tomas de agua y sus
-                  respectivos caudales para garantizar un uso equitativo y
-                  sostenible. Facilita el mantenimiento y la distribución
-                  adecuada de agua en los canales de riego para maximizar la
-                  eficiencia del sistema.
+                  Realiza de forma efectiva y transparente la facturación y
+                  cobro del canon de agua a los regantes.
                 </p>
               </div>
             </div>
@@ -180,7 +181,7 @@
             </button>
             <div class="feature__media">
               <div class="accordeon_content">
-                <figure class="feature__media">
+                <figure class="feature__figure">
                   <img
                     src="./img/ventajas img_mobile.jpg"
                     alt="imagen o video"
@@ -188,17 +189,60 @@
                   />
                 </figure>
                 <p class="feature__text">
-                  Lleva un registro completo de las tomas de agua y sus
-                  respectivos caudales para garantizar un uso equitativo y
-                  sostenible. Facilita el mantenimiento y la distribución
-                  adecuada de agua en los canales de riego para maximizar la
-                  eficiencia del sistema.
+                  Almacena y organiza de manera segura todos los documentos
+                  relevantes para la junta y sus regantes.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <section class="banner">
+        <div class="banner__container">
+          <p id="banner_item" class="banner__item">Administra</p>
+        </div>
+      </section>
+      <section class="demo">
+        <h2 class="demo__title poppins-bold">Prueba nuestra demo</h2>
+
+        <div class="demo__info">
+          <h2 class="demo__logo poppins-bold">
+            <span class="color__primary">Riego</span
+            ><span class="color__secondary">Peru</span>
+          </h2>
+          <ul class="demo__list">
+            <li class="demo__item">Gestiona facilmente la facturación.</li>
+            <li class="demo__item">
+              Personaliza las tasas % por rubros y/o retribución económica.
+            </li>
+            <li class="demo__item">
+              Ingresa y administra facilmente los padrón de regantes.
+            </li>
+            <li class="demo__item">Interfaz intuitiva y fácil de usar.</li>
+          </ul>
+          <div class="demo__text">
+            <p>Haz click en el botón e ingresa el usuario y contraseña</p>
+            <p class="demo__negrita">
+              Usuario: admin <br />
+              Contraseña: admin
+            </p>
+          </div>
+          <div class="demo__button poppins-bold">
+            <a href="">Haz click e ingresa a la demo</a>
+          </div>
+        </div>
+      </section>
+      <section class="action">
+        <p class="action__text poppins-bold gradient-text">
+          Mejorara la eficiencia en tus procesos de emisión de recibos, cobranza
+          , procesos administrativos y reportes financieros
+        </p>
+        <div class="whatsapp__button poppins-bold">
+          <a href="">WhatsApp</a>
+        </div>
+      </section>
     </div>
+    <script src="./js/acordeon.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>
