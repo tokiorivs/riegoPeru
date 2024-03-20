@@ -1,6 +1,8 @@
 :root {
     --blue-primary: #3BBCD9;
     --red-primary: #f24141;
+    --blue-secondary: #0F273E;
+    --blue-primary: #2A6EAF;
     --yellow-secondary: #f2b705;
     --coffe-secondary: #bf9075;
     --baby-blue-secondary: #88e8f2;
@@ -11,15 +13,17 @@
     
 }
 body {
+    margin: 0;
+    padding: 0;
     font-family:"Poppins", sans-serif ;
     font-size: 16px;
 }
 .container {
-  width: 90%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  max-width: 1400px;
   min-width:360px ;
-  padding: 10px 10px;
 }
 
 .poppins-regular {
@@ -54,12 +58,7 @@ body {
 .subtitle {
   font-size: 1.6rem ;
 }
-.title {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 700;
-  font-style: bold;
-}
+
 .subtitle {
   text-align: center;  
   font-size: 1.5rem;
@@ -73,19 +72,25 @@ body {
   font-style: normal;
   font-size: 1.2rem;
 }
+.header {
+  display: grid;
+  background-color: var(--blue-primary);
+  place-items: center;
+}
 
 .nav {
   --close:none;
   --hamburguer:block;
-  --transform: translate(-120%) ;
+  --transform: translate(-140%) ;
 
   display: grid;
   grid-template-columns: max-content max-content;
   grid-template-areas: "logo active";
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 0;
   cursor: pointer;
+  width: 90%;
+  padding: 12px;
 }
 .nav:target {
   --close: block;
@@ -93,16 +98,19 @@ body {
   --transform: translate(0);
 }
 .nav__logo{
+  grid-area: logo;
   padding: 0px 5px;
   z-index: 1;
   font-size: 30px;
   text-decoration: none;
 }
 .nav__hamburguer {
+  grid-area: active;
   z-index: 1;
   display: var(--hamburguer);
 }
 .nav__close{
+  grid-area: active;
   z-index: 1;
   display: var(--close);
 }
@@ -145,7 +153,7 @@ body {
   height: 30px;
 }
 .color__primary {
-  color: var(--blue-primary);
+  color: var(--blue-secondary);
 }
 .color__secondary {
   color: var(--red-primary);
@@ -153,33 +161,42 @@ body {
 .hero {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 0px 0px 35px;
+  width: 90%;
+  padding: 10px 0px 35px;
   margin: 15px 0px;
-  background-image: url(../img/back_5.png);
+}
+.hero__media {
+  display: none;
 }
 .hero__title{
-  min-width: 340px;
-  padding: 0px 5px;
+  grid-area: title;
+  display: flex;
+  }
+.hero__title h1 {
+  text-align: center;
+  font-size: 35px;
 }
 .hero__list{
+  grid-area: info;
   font-size: 1rem;
   padding-bottom: 20px;
+  margin: 10px;
+}
+.hero__button__container {
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .hero__button{
   width: 165px;
   height:52px ;
   background-color: var(--red-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 15px;
   font-size: 18px;
-}
-.hero__button a{
   text-align: center;
   color: white;
-  text-decoration: none;
 }
 .features {
   display: grid;
@@ -367,123 +384,28 @@ body {
   color: transparent;
 }
 
-.btn-59,
-.btn-59 *,
-.btn-59 :after,
-.btn-59 :before,
-.btn-59:after,
-.btn-59:before {
-  border: 0 solid;
-  box-sizing: border-box;
-}
-.btn-59 {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: button;
-  background-color: #000;
-  background-image: none;
-  color: #fff;
-  cursor: pointer;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: 100%;
-  line-height: 1.5;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  padding: 0;
-}
-.btn-59:disabled {
-  cursor: default;
-}
-.btn-59:-moz-focusring {
-  outline: auto;
-}
-.btn-59 svg {
-  display: block;
-  vertical-align: middle;
-}
-.btn-59 [hidden] {
-  display: none;
-}
-.btn-59 {
-  background: none;
-  box-sizing: border-box;
-  color: #000;
-  display: block;
-  font-weight: 900;
-  -webkit-mask-image: none;
-  padding: 1.5rem 4rem;
-  position: relative;
-  text-transform: uppercase;
-}
-.btn-59 span {
-  background: #fff;
-  border: 1px solid;
-  border-radius: 999px;
-  display: grid;
-  inset: 0;
-  place-items: center;
-  pointer-events: none;
-  position: absolute;
-}
-.btn-59:hover span {
-  -webkit-animation: tada 0.8s;
-  animation: tada 0.8s;
-}
-@-webkit-keyframes tada {
-  0% {
-    transform: scaleX(1);
-  }
-  10%,
-  20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
-  }
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
-  }
-  40%,
-  60%,
-  80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-@keyframes tada {
-  0% {
-    transform: scaleX(1);
-  }
-  10%,
-  20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
-  }
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
-  }
-  40%,
-  60%,
-  80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
+
 
 
 @media (min-width:768px) {
+  .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .header{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
   .nav {
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "logo menu menu menu";
+    align-items: center;
+    justify-content: center;
   }
   
   .nav__links{
@@ -517,7 +439,30 @@ body {
   .nav__hamburguer {
     display: none;
   }
-  .hero {
+   .hero {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 2fr;
+    grid-template-areas: "info info "
+                          "media media" 
+    ;
+    gap: 20px;
+  }
+  .hero__info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__media {
+    grid-area: media;
+    display: flex;
+    padding: 10px 0px;
+  }
+
+  .hero__media__video {
+    width: 100%;
+    height: auto;
   }
 }
 @media (min-width:1024px)  {
@@ -531,4 +476,6 @@ body {
     grid-area: contact;
     display: block;
   }
+ 
+
 }
