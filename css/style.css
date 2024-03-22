@@ -1,3 +1,4 @@
+
 :root {
     --blue-primary: hsl(209,55%,20%);
     --blue-contraste: hsl(209,61%,95%);
@@ -17,11 +18,15 @@
     --green-whatsapp: #00C14F;
     
 }
+
+
 body {
     margin: 0;
     padding: 0;
-    font-family:"Poppins", sans-serif ;
+    font-family:"Red Rose", serif ;
     font-size: 16px;
+    font-style: normal;
+    font-optical-sizing: auto;
 }
 .container {
   display: grid;
@@ -48,35 +53,6 @@ body {
   background-color: #FE8099;
 }
 
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
 .subtitle {
   font-size: 1.6rem ;
 }
@@ -244,6 +220,26 @@ box-shadow: none;
   text-align: center;
   color: white;
   border: none;
+}
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3,auto);
+  grid-template-areas: "title"
+                        "info" 
+                        "media"
+  ;
+  margin: 0 20px;
+}
+
+.services__main__title {
+  grid-area: title;
+}
+.services__container {
+  grid-area: info;
+}
+.services__media {
+  grid-area: media;
 }
 .features {
   display: grid;
