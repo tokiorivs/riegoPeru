@@ -250,7 +250,7 @@ box-shadow: none;
   margin: 0px 20px;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr;
-  grid-template-areas: "info"
+  grid-template-areas: "title"
              "media";
 }
 .feature__info{
@@ -262,7 +262,6 @@ box-shadow: none;
   justify-content: center;
 }
 .feature__media {
-  grid-area: media;
   display: none;
   opacity: 1;
   margin-bottom: 15px;
@@ -545,14 +544,23 @@ box-shadow: none;
   .hero__media{
     grid-area: media;
   }
+  .features {
+    max-width: 1400px;
+    display: flex;
+    margin: 0 auto;
+  }
   .feature__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-template-areas: "info media";
   }
-  .feature__button__container {
+  .feature__buttons {
     grid-area: info;
+  }
+  .feature__button {
+    margin: 0px;
+    padding: 0px;
   }
   .feature__media {
     grid-area: media;
