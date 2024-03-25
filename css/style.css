@@ -1,7 +1,7 @@
 
 :root {
     --blue-primary: hsl(209,55%,20%);
-    --blue-contraste: hsl(209,61%,95%);
+    --blue-contraste: hsl(209,90%,95%);
     --blue-contraste_2: hsl(209,61%,70%);
 
     --red-primary: hsl(0,87%,70%);
@@ -24,7 +24,7 @@ body {
     margin: 0;
     padding: 0;
     font-family:"Red Rose", serif ;
-    font-size: 16px;
+    font-size: 17px;
     font-style: normal;
     font-optical-sizing: auto;
 }
@@ -34,41 +34,30 @@ body {
   justify-content: center;
   min-width:320px ;
 }
-.color_yellow {
-  background-color: #FFCD00 ;
-}
-.color__blue {
-  background-color: #9BD6CD;
-}
-.color__green_1 {
-  background-color: #8AC659;
-}
-.color__green_2 {
-  background-color: #00A84E;
-}
-.color__blue_2 {
-  background-color: #00A9B3;
-}
-.color__pink {
-  background-color: #FE8099;
-}
-
-.subtitle {
-  font-size: 1.6rem ;
-}
-
-.subtitle {
-  text-align: center;  
-  font-size: 1.5rem;
+.large__title {
   font-weight: 700;
-  font-style: bold;
-  
+  font-style: normal;
+  font-size: 34px;
 }
-.text {
-
+.title__1 {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 28px;
+}
+.title__2 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 22px;
+}
+.headline {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+}
+.parragraph{
   font-weight: 400;
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 16px;
 }
 .header {
   display: grid;
@@ -211,15 +200,16 @@ align-items: center;
 justify-content: center;
 box-shadow: none;
 }
-.hero__button{
-  width: 165px;
-  height:52px ;
-  background-color: var(--red-primary);
-  border-radius: 15px;
-  font-size: 18px;
+.button {
+  padding: 17px 25px;
+  border-radius: 25px;
   text-align: center;
   color: white;
   border: none;
+  font-weight: bolder;
+}
+.hero__button{
+  background-color: var(--red-primary);
 }
 .services {
   display: grid;
@@ -229,17 +219,47 @@ box-shadow: none;
                         "info" 
                         "media"
   ;
-  margin: 0 20px;
+  margin: 20px 20px;
+  border-radius: 28px;
+  padding: 10px 15px  ;
+  background-color: var(--blue-contraste);
 }
-
-.services__main__title {
+.service__main__title {
   grid-area: title;
+  text-align: center;
 }
-.services__container {
+.service__container {
   grid-area: info;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.services__media {
+.service__features {
+  list-style-type: none;
+  padding: 0px;
+}
+.service__list::before {
+  content: "✓"; 
+  padding-right: 5px ;
+}
+.service__button__container {
+  display: flex;
+  margin: 20px 0px;
+}
+.service__button {
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: var(--red-primary);
+}
+.service__media {
   grid-area: media;
+  display: flex;
+  margin: 10px auto;
+  width: 100%;
+}
+.services__video {
+  width: 100%;
+  border-radius: 28px;
 }
 .features {
   display: grid;
