@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <div class="nav__container">
         <nav class="nav" id="nav">
           <a href="/" class="nav__logo poppins-bold"
             ><span class="logo__white">Riego</span
@@ -32,7 +32,7 @@
             </li>
           </ul>
           <div class="nav__button__contact">
-            <a class="whatsapp__button" href="">WhatsApp</a>
+            <button class="whatsapp__button button headline" href="">WhatsApp</button>
           </div>
           <a href="" class="nav__close"
             ><img src="./img/icons8-close-white.svg" alt=""
@@ -41,6 +41,10 @@
             ><img class="nav__img" src="./img/icon-hamburger.svg" alt=""
           /></a>
         </nav>
+      </div>
+      
+      
+      <div class="hero__container">
         <div class="hero">
           <div class="hero__info">
             <div class="hero__title">
@@ -69,7 +73,7 @@
               </li>
             </ul>
             <div class="hero__button__container">
-              <button class="hero__button button title__2" href="">
+              <button class="hero__button button headline" href="">
                 Contáctenos
               </button>
             </div>
@@ -86,18 +90,18 @@
             ></video>
           </div>
         </div>
-      </header>
+      </div>
       <section class="services">
-        <h2 class="service__main__title title__1">
+        <h2 class="service__main__title large__title">
           Ventajas de usar <span class="logo__white">Riego</span
             ><span class="logo__red">Peru</span>
         </h2>
-        <div class="service__container">
+        <div class="service__container service__card__1">
           <div class="service__info">
-            <p class="service__name title__2">Administración</p>
-            <p class="service_title">
+            <h3 class="service__name title__2">Administración</h3>
+            <h2 class="service_title ">
               Registra, organiza y administra facilmente
-            </p>
+            </h2>
             <ul class="service__features">
               <li class="service__list">Padrones de regantes</li>
               <li class="service__list">Administración de juntas</li>
@@ -107,13 +111,61 @@
               <button class="service__button button headline">Recibe más información</button>
             </div>
           </div>
-        </div>
-         <div class="service__media">
+            <div class="service__media">
             <video src="./img/startup.mp4" alt="video" class="service__video"   autoplay
               loop
               muted
               preload="none"></video>
           </div>
+        </div>
+        <div class="service__container service__card__2">
+          <div class="service__info">
+            <h3 class="service__name title__2">Contabilidad</h3>
+            <h2 class="service_title ">
+              Información precisa y actualizada
+            </h2>
+            <ul class="service__features">
+              <li class="service__list">Control de Ingresos y Gastos</li>
+              <li class="service__list">Proporciona datos financieros claros</li>
+              <li class="service__list">Facilita la gestión del flujo de efectivo</li>
+              <li class="service__list">Emisión e Impresión de comprobantes de forma masiva</li>
+              <li class="service__list">Facil integración con otros softwares</li>
+            </ul>
+            <div class="service__button__container">
+              <button class="service__button button headline">Recibe más información</button>
+            </div>
+          </div>
+            <div class="service__media">
+            <video src="./img/startup.mp4" alt="video" class="service__video"   autoplay
+              loop
+              muted
+              preload="none"></video>
+          </div>
+        </div>
+        <div class="service__container service__card__3">
+          <div class="service__info">
+            <h3 class="service__name title__2">Gestión</h3>
+            <h2 class="service_title ">
+              Sistema de Gestión de Tickets
+            </h2>
+            <ul class="service__features">
+              <li class="service__list">Registro de solicitudes</li>
+              <li class="service__list">Asignación automatica</li>
+              <li class="service__list">Seguimiento y priorización</li>
+            </ul>
+            <div class="service__button__container">
+              <button class="service__button button headline">Recibe más información</button>
+            </div>
+          </div>
+            <div class="service__media">
+            <video src="./img/startup.mp4" alt="video" class="service__video"   autoplay
+              loop
+              muted
+              preload="none"></video>
+          </div>
+        </div>
+        
+       
       </section>
       <section class="banner">
         <div class="banner__container">
@@ -121,13 +173,10 @@
         </div>
       </section>
       <section class="demo">
-        <h2 class="demo__title poppins-bold">Prueba nuestra demo</h2>
+        <h2 class="demo__title large__title">Prueba nuestra demo <span class="logo__white">Riego</span
+            ><span class="logo__red">Peru</span></h2>
 
         <div class="demo__info">
-          <h2 class="demo__logo poppins-bold">
-            <span class="logo__white">Riego</span
-            ><span class="logo__red">Peru</span>
-          </h2>
           <ul class="demo__list">
             <li class="demo__item">Gestiona facilmente la facturación.</li>
             <li class="demo__item">
@@ -145,9 +194,12 @@
               Contraseña: admin
             </p>
           </div>
-          <div class="demo__button poppins-bold">
-            <a href="">Haz click e ingresa a la demo</a>
+          <div class="container__demo__button  ">
+            <button class="demo__button button headline" href="">Haz click e ingresa a la demo</button>
           </div>
+        </div>
+        <div class="demo__media">
+          <video src="./img/startup.mp4" alt="" class="demo__img">
         </div>
       </section>
       <section class="action">
@@ -155,8 +207,8 @@
           Mejorara la eficiencia en tus procesos de emisión de recibos, cobranza
           , procesos administrativos y reportes financieros
         </p>
-        <div class="whatsapp__button poppins-bold">
-          <a href="">WhatsApp</a>
+        <div >
+          <button class="whatsapp__button button headline" href="">WhatsApp</button>
         </div>
       </section>
     </div>
