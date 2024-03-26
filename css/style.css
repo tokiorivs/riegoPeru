@@ -34,7 +34,6 @@ body {
   display: grid;
   place-items: center;
   min-width:320px ;
-
 }
 .large__title {
   font-weight: 700;
@@ -62,13 +61,19 @@ body {
   font-size: 16px;
 }
 .nav__container {
+  z-index: 100;
   width: 100vw;
   display: grid;
   place-items: center;
   background-color: var(--blue-secondary);
   position: fixed;
+  top: 0;
+  left: 0;
 }
-
+.nav__container.scrolled {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 .nav {
   --close:none;
@@ -85,6 +90,7 @@ body {
   padding: 12px;
   max-width: 1440px;
 }
+
 .nav:target {
   --close: block;
   --hamburguer: none;
@@ -135,9 +141,7 @@ body {
 }
 .nav__link {
   font-size: 30px;
-}
-.nav__link {
-  text-decoration: none;
+   text-decoration: none;
 }
 .nav__img{
   width: 30px;
@@ -152,6 +156,9 @@ body {
 .logo__red {
   color: var(--red-primary);
 }
+.logo__white.primary {
+  color: var(--blue-primary);
+}
 .hero__container {
   display: grid;
   place-items: center;
@@ -165,7 +172,7 @@ body {
   align-items: center;
   width: 90%;
   padding: 10px 0px 35px;
-  margin: 10px 0px;
+  margin: 80px 0px;
   max-width: 1440px;
 }
 .hero__media {
@@ -317,6 +324,7 @@ box-shadow: none;
   display: none;
 }
 .banner {
+
   margin: 10px 0px;
   background-color: var(--blue-secondary);
   width: 100%;
@@ -343,8 +351,8 @@ box-shadow: none;
   ;
   justify-content: center;
   align-items: center;
-  margin: 0px 0px;
   gap: 20px;
+  width: 90%;
   max-width: 1440px;
 }
 .demo__title {
@@ -392,8 +400,8 @@ box-shadow: none;
 }
 .action {
   width:100% ;
-  margin: 30px 0px;
-  padding: 30px 0px;
+  margin: 0px 0px;
+  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -403,7 +411,7 @@ box-shadow: none;
   color: white;
   font-size: 1.4rem;
   text-align: center;
-  padding: 20px 18px;
+  padding: 10px 18px;
 }
 .button {
   padding: 17px 25px;
@@ -473,6 +481,9 @@ box-shadow: none;
     font-weight: bold;
     font-size: 1.2rem;
     text-transform: capitalize;
+  }
+  .nav__link.primary{
+    color: var(--blue-secondary);
   }
   .nav__button__contact {
     /* grid-area: contact; */
