@@ -54,7 +54,7 @@ body {
 .headline {
   font-weight: 600;
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
 }
 .parragraph{
   font-weight: 400;
@@ -239,7 +239,7 @@ body {
   color: #ffffff;
   text-align: left;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 14px;
 }
 .hero__button__container {
 display: flex;
@@ -326,7 +326,8 @@ box-shadow: none;
 }
 .service__media {
   grid-area: media;
-  display: flex;
+  /* display: flex; */
+  display: none;
   margin: 18px auto;
   width: 100%;
 }
@@ -511,7 +512,7 @@ box-shadow: none;
   .nav__link{
     color: var(--blue-contraste_2);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 16px;
     text-transform: capitalize;
   }
   .nav__link.primary{
@@ -564,7 +565,9 @@ box-shadow: none;
   margin: 20px 20px;
  
   gap: 20px;
-  
+}
+.service__media{
+  display: flex;
 }
 .demo {
   display: grid;
@@ -630,20 +633,37 @@ box-shadow: none;
     margin: 0 auto;
   }
   .services {
-    max-width: 1440px;
-  }
-  .service__container {
-    display: grid;
-    place-items: center;
-  }
-/* .service__container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: 1fr;
-  grid-template-areas: "info info media media media media";
-    padding: 10px 20px  ; 
-    border-radius: 28px;
-} */
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(4,auto);
+  grid-template-areas: "title title"
+                       "card_1 card_1" 
+                       "card_2 card_2" 
+                       "card_3 card_3"
+  ;
+  margin: 20px 20px;
+  max-width: 1440px;
+
+ 
+  gap: 20px;
+  
+}
+  .service__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "info media";
+    gap: 20px;
+  }
+    .service__container.service__card__2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "media info";
+    gap: 20px;
+  }
+
+
 .service__button__container {
   display: flex;
   margin: 20px 0px;
