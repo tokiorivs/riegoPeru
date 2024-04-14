@@ -55,3 +55,33 @@ function animateBars(){
     // logo_riego.classList.toggle('logo__red')
     document.body.classList.toggle("no-scroll")
 }
+
+
+// const button_container = document.querySelectorAll('.question__container');
+// const arrow = document.querySelector('.question__close');
+// const response = document.querySelector('.question__response__container');
+// console.log(response)
+
+// function acordeonMenu(){
+//   response.classList.toggle("question__extra");
+//   console.log(response);
+// }
+
+// button_container.addEventListener("click", acordeonMenu);
+
+const questions = document.getElementsByClassName('question__container');
+console.log(questions)
+
+for(let i = 0 ; i <= questions.length; i++)
+  {
+    question = questions[i];
+    question.addEventListener("click", function(){
+      question.classList.toggle("question__response");
+      console.log(question.classList)
+    }
+
+    )
+  }
+function acordeonMenu() {
+  
+}
