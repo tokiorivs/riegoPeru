@@ -55,3 +55,21 @@ function animateBars(){
     // logo_riego.classList.toggle('logo__red')
     document.body.classList.toggle("no-scroll")
 }
+
+
+// const button_container = document.querySelectorAll('.question__container');
+// const arrow = document.querySelector('.question__close');
+// const response = document.querySelector('.question__response__container');
+// console.log(response)
+
+// function acordeonMenu(){
+//   response.classList.toggle("question__extra");
+//   console.log(response);
+// }
+
+// button_container.addEventListener("click", acordeonMenu);
+
+const questions = document.getElementsByClassName('question__container');
+console.log(questions)
+
+
